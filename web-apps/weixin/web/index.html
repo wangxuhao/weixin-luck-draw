@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+    <script type="text/javascript" src="js/lodash-compat/lodash.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>玉湖集团-年会抽奖</title>
+</head>
+<body>
+<div class="box" id="main-container">
+    <div class="topIMG"><img src="images/logo.png" style="width:100%;height:80px"></img></div>
+    <div class="botIMG"></div>
+    <div class="content clearfix">
+        <div class="logo"></div>
+		<div class="shake-config">
+			<ul>
+                <li><a href="showAllMemberView.action" target="_blank">公众号关注页</a></li>
+                <li><a href="configLotteryShake.action" target="_blank">红包雨控制台</a></li>
+                <li><a href="http://www.yinlibaohe.com:8088/year" target="_blank">阳光普照奖</a></li>
+            </ul>
+		</div>
+        <div class="list-items clearfix">
+            <ul class="prizeItems"></ul>
+        </div>
+        <script type="text/template" id="prizeItemList-template">
+			<%var i = 1;%>
+			<%_.each(items, function(item){%>
+				<li><a href="showLotteryDraw.action?prizeItemId=<%=item.id%>" class="No<%=i%>"><%=item.name%></a></li>
+				<% i++ %>
+			<%})%>
+		</script>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	                <Context path="/Weixin"
+	                         docBase="D:\code\mycode\project-weixin\web-apps\weixin"
+	                         reloadable="true" allowLinking="true">
+	                    <Resources className="org.apache.naming.resources.VirtualDirContext"
+	                               extraResourcePaths="" />
+	                    <Loader className="org.apache.catalina.loader.VirtualWebappLoader"
+	                            virtualClasspath=""
+	                            searchVirtualFirst="true"/>
+	                </Context>

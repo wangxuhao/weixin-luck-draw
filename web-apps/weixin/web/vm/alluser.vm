@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/> 
+    <link rel="stylesheet" href="css/alluser.css">
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+    <script type="text/javascript" src="js/lodash-compat/lodash.js"></script>
+    <style>
+    	body{ background:url(images/bg.jpg); background-size:cover;}
+    </style>
+    <title>玉湖集团</title>
+#[[
+    <script type="text/javascript">
+    	void function($){
+			$(function(){  
+				
+				var loadMemberFun = function() {
+					$.post('showAllMember.action',function(data){
+						var items = JSON.parse(data);
+						var html=_.template($("#sphere__roller-template").html());
+						$('.sphere__roller').empty().append(html({items:items}));
+					});
+				}
+				
+				// 每30秒重新获取用户信息
+				setInterval(loadMemberFun, 30000);
+				loadMemberFun();
+				var $sphere = $('.sphere'),
+					$figures = $('.sphere__ring-figure');
+				$sphere.toggleClass('is-active');
+			});
+		}(window.jQuery);
+    </script>
+ ]]#
+</head>
+<body>
+<script type="text/template" id="sphere__roller-template">
+
+	<div class="sphere__ring sphere__ring--1">
+		<%for(var i = 0; i <= 49; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--2">
+		<%for(var i = 50; i <= 98; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--3">
+		<%for(var i = 99; i <= 147; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--4">
+		<%for(var i = 148; i <= 195; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--5">
+		<%for(var i = 196; i <= 243; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--6">
+		<%for(var i = 244; i <= 290; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--7">
+		<%for(var i = 291; i <= 337; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--8">
+		<%for(var i = 338; i <= 383; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--9">
+		<%for(var i = 384; i <= 429; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--10">
+		<%for(var i = 430; i <= 474; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--11">
+		<%for(var i = 475; i <= 519; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--12">
+		<%for(var i = 520; i <= 563; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--13">
+		<%for(var i = 564; i <= 607; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--14">
+		<%for(var i = 608; i <= 650; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--15">
+		<%for(var i = 651; i <= 693; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--16">
+		<%for(var i = 694; i <= 735; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+	</div>
+	<div class="sphere__ring sphere__ring--17">
+		<%for(var i = 736; i <= 777; i++){%>
+			<%if(items.length > i){%>
+				 <div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('<%=items[i].headimgurl%>') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}else{%>
+				<div class="sphere__ring-figure">
+					<div class="sphere__ring-image" style="background:url('images/memberlogo.jpg') no-repeat; background-size: cover" data-name="Lorem ipsum"></div>
+				</div>
+			<%}%>
+		<%}%>
+</div>	
+</script>
+<div class="sphere">
+	<div class="sphere__size">
+		<div class="sphere__roller">
+		</div>
+	</div>
+</div>
+<div style="float:right">
+	<img src="images/account.jpg" style="width:auto;height:auto;margin-top:115%;max-width:240px;margin-right: 100px"></img>
+</div>
+</body>
+</html>

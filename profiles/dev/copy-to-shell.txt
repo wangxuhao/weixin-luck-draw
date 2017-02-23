@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Javascript debug option
+#export THINKBASE_NET_RHINO_DEBUGGER="local://CMS"
+
+# PROFILE 通常可以设置为基于 ${PROFILE_REPO} 的相对目录, 如果 bat 文件就放在 profile 下则可以不设, 或者简单的设为 $(cd "$(dirname "$0")"; pwd)
+export PROFILE=$(cd "$(dirname "$0")"; pwd)
+
+# 设置数据库连接信息
+export JDBC_URL="jdbc:mysql://localhost:3306/weixin?useUnicode=true&characterEncoding=utf8"
+export DB_USERNAME="root"
+export DB_PASSWORD=
+export JAVA_HOME=
+# 设置公众号TOKEN
+export WEIXIN_TOKEN="test"
+# 设置公众号APPID
+export WEIXIN_APPID="test"
+# 设置公众号APPSECRET
+export WEIXIN_APPSECRET="test"
+# 设置公众号WEIXIN_ENCODINGAESKEY (43位字符组成)
+export WEIXIN_ENCODINGAESKEY="3Qykhjp7W09yOLdhLh6uNXHqtAZRjQmAEt0Syx3cQ4p"
+# 设置公众号微信号ACCOUNT
+export WEIXIN_ACCOUNT="gh_efafa9df8b27"
+# 最后简单的调用 boot.sh
+chmod +x "$PROFILE/../../etc/runner/boot.sh"
+"$PROFILE/../../etc/runner/boot.sh"
+# 进入启动目录，执行  nohup ./start.sh

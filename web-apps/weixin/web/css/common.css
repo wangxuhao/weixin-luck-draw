@@ -1,0 +1,14 @@
+﻿.error {
+	color:red;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.userli {
+	list-style:none;
+	clear:both;
+	padding-top:10px;
+}

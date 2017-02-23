@@ -1,0 +1,235 @@
+#parse("header.vm")
+<input type="hidden" name="prizeItemId" value="$!prizeItemId"/>
+<div class="box" id="box">
+    <div class="topIMG"><a href="index.html" ><img src="images/logo.png" style="width:100%;height:80px"></img></a></div>
+    <div class="botIMG"></div>
+    <div class="control-tip">
+   		<span>剩余<font color="red" id="cyclecount"></font>轮抽奖</span>
+    </div>
+  	<div class="controls">
+   		<button class="controls__btn controls__btn-rotate" type="button">开始抽奖</button>
+    </div>
+    <div class="content clearfix">
+        <div class="logo">
+        </div>
+        <div class="content-left">
+            <div class="grid"></div>
+            <div class="ImgBox">
+                
+            </div>
+        </div>
+        <div class="content-right">
+            <p>$prizeItemName 中奖名单</p>
+            <ul class="bidInfoArea">
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="display:none">
+<img src="images/qiu/1.png">
+<img src="images/qiu/2.png">
+<img src="images/qiu/3.png">
+<img src="images/qiu/4.png">
+<img src="images/qiu/5.png">
+<img src="images/qiu/6.png">
+
+<img src="images/qiu/7.png">
+<img src="images/qiu/8.png">
+<img src="images/qiu/9.png">
+<img src="images/qiu/0.png">
+</div>
+<script type="text/template" id="userInfoList-template">
+  	 <%if(items.length>0){%>
+		<a class="common sty1" style="top:107px;left:134px;"><img src="<%=items[0].headimgurl%>" class="sty1"></a>
+	 <%}%>
+	 <% if(items.length>1){%>
+    	<a class="common sty2" style="top:185px;left:45px"><img src="<%=items[1].headimgurl%>" class="sty2"></a>
+     <%}%>
+      <%if(items.length>2){%>
+    	<a class="common sty1" style="top:124px;left:370px;"><img src="<%=items[2].headimgurl%>" class="sty1"></a>
+     <%}%>
+      <%if(items.length>3){%>
+   		 <a class="common sty2" style="top:350px;left:90px"><img src="<%=items[3].headimgurl%>" class="sty2"></a>
+     <%}%>
+      <%if(items.length>4){%>
+   		 <a class="common sty3" style="top:220px;left:354px"><img src="<%=items[4].headimgurl%>" class="sty3"></a>
+     <%}%>
+      <%if(items.length>5){%>
+    	<a class="common sty4" style="top:120px;left:521px"><img src="<%=items[5].headimgurl%>" class="sty4"></a>
+     <%}%>
+      <%if(items.length>6){%>
+   		 <a class="common sty1" style="top:147px;left:721px;"><img src="<%=items[6].headimgurl%>" class="sty1"></a>
+     <%}%>
+      <%if(items.length>7){%>
+    	<a class="common sty2" style="top:345px;left:546px"><img src="<%=items[7].headimgurl%>" class="sty2"></a>
+     <%}%>
+      <%if(items.length>8){%>
+    	<a class="common sty3" style="top:200px;left:427px"><img src="<%=items[8].headimgurl%>" class="sty3"></a>
+     <%}%>
+      <%if(items.length>9){%>
+    	<a class="common sty4" style="top:260px;left:530px"><img src="<%=items[9].headimgurl%>" class="sty4"></a>
+     <%}%>
+      <%if(items.length>10){%>
+    	<a class="common sty1" style="top:270px;left:268px;"><img src="<%=items[10].headimgurl%>" class="sty1"></a>
+     <%}%>
+      <%if(items.length>11){%>
+    	<a class="common sty2" style="top:350px;left:320px"><img src="<%=items[11].headimgurl%>" class="sty2"></a>
+     <%}%>
+      <%if(items.length>12){%>
+    	<a class="common sty3" style="top:270px;left:124px"><img src="<%=items[12].headimgurl%>" class="sty3"></a>
+     <%}%>
+     <%if(items.length>13){%>
+    	<a class="common sty4" style="top:125px;left:221px"><img src="<%=items[13].headimgurl%>" class="sty4"></a>
+     <%}%>
+     <%if(items.length>14){%>
+    	<a class="common sty4" style="top:390px;left:221px"><img src="<%=items[14].headimgurl%>" class="sty4"></a>
+     <%}%>
+     <%if(items.length>15){%>
+    	<a class="common sty4" style="top:290px;left:670px"><img src="<%=items[15].headimgurl%>" class="sty4"></a>
+     <%}%>
+</script>
+<script type="text/template" id="bidInfoList-template">
+	<%for(var i = 0; i < 30 && i < items.length; i++){%>
+		 <li>
+            <img src="<%=items[i].headimgurl%>"/>
+            <span><%=items[i].realname%></span>
+        </li>	
+	<%}%> 
+</script>
+#[[
+<script type="text/javascript">
+
+void function($){
+	$(function(){
+	  
+		var $imgbox = $('.ImgBox'),
+			$bidInfoArea = $('.bidInfoArea'),
+			userInfoItems = [],
+			t = {},
+			r = {},
+			prizeItemId = $('input[name=prizeItemId]').val();
+			
+		var cycleCountFun = function() {
+			$.post('queryCycleCount.action',{prizeItemId:prizeItemId},function(count){
+				$('#cyclecount').text(count);
+				if (count == 0) {
+					$('.controls__btn-rotate').attr('disabled', true);
+					$('.controls__btn-rotate').addClass('controls__btn-rotate-disabled');
+				}
+			});
+		}
+		
+		var loadImgBoxFun = function(callback) {
+			$.post('getAllMemberInfo4Draw.action',function(data){
+				var items = JSON.parse(data);
+				userInfoItems = items;
+				var html=_.template($("#userInfoList-template").html());
+				$imgbox.append(html({items:items}));
+				callback && callback();
+			});
+		}
+		
+		var changeImgBoxInfo = function() {
+			var items = randomItems(userInfoItems, Math.min(userInfoItems.length, 16));
+			var html=_.template($("#userInfoList-template").html());
+			$imgbox.empty().append(html({items:items}));
+		}
+		
+		var imgnum=0; 
+		var bgroll= function() {
+			imgnum++;    
+			imgnum=imgnum%9;         
+			$('.content-left').css('background','url("images/qiu/'+imgnum+'.png") no-repeat 80px -25px');  
+		}
+		
+		var randomItems = function(arr, num) {
+    		var temp_array = new Array();
+		    for (var index in arr) {
+		        temp_array.push(arr[index]);
+		    }
+		    var return_array = new Array();
+		    for (var i = 0; i<num; i++) {
+		        if (temp_array.length>0) {
+		            var arrIndex = Math.floor(Math.random()*temp_array.length);
+		            return_array[i] = temp_array[arrIndex];
+		            temp_array.splice(arrIndex, 1);
+		        } else {
+		            break;
+		        }
+		    }
+   		 return return_array;
+		}
+		
+		var bidFun = function(callback) {
+			$.post('buildMemberInfo4Draw.action',{prizeItemId:prizeItemId}, function(data){
+				var items = JSON.parse(data);
+				userInfoItems = items;
+				var html=_.template($("#bidInfoList-template").html());
+				$bidInfoArea.empty().append(html({items:items}));
+				cycleCountFun();
+				callback && callback();
+				if(prizeItemId==1){
+					$('.content-right ul li').css({"width":"600px","height":"300px","font-size":"80px"});
+					$('.content-right ul li img').css({"width":"200px","height":"200px"})
+				}
+			});
+		}
+		    document.onkeydown=function(event){
+             var e = event || window.event || arguments.callee.caller.arguments[0];
+            if(e && e.keyCode==13){ // 按 enter 键
+				// 校验奖项物品是否还有
+				$.post('getPrizeCateByItemId.action', {prizeItemId:prizeItemId}, function(data){
+					if (data > 0) {
+						loadImgBoxFun(function(){
+							$('.controls__btn-rotate').text('停止');
+							t = setInterval(changeImgBoxInfo, 100);
+							r = setInterval(bgroll, 250);
+						});
+						$imgbox.toggleClass('is-active');
+					} else {
+						alert('可用奖品不足');
+					}
+				});
+               }
+             if(e && e.keyCode==32){ // 按空格
+				if($imgbox.hasClass('is-active')){
+					$('.controls__btn-rotate').text('开始抽奖');
+					clearInterval(t);
+					clearInterval(r);
+					bidFun(changeImgBoxInfo);
+					$imgbox.toggleClass('is-active');
+				}
+               }            
+         }; 
+		$('.controls').on('click', '.controls__btn-rotate', function(e){
+			var self = this;
+			if($imgbox.hasClass('is-active')){
+				self.textContent = '开始抽奖';
+				clearInterval(t);
+				clearInterval(r);
+				bidFun(changeImgBoxInfo);
+				$imgbox.toggleClass('is-active');
+			} else {
+				// 校验奖项物品是否还有
+				$.post('getPrizeCateByItemId.action', {prizeItemId:prizeItemId}, function(data){
+					if (data > 0) {
+						loadImgBoxFun(function(){
+							self.textContent = '停止';
+							t = setInterval(changeImgBoxInfo, 100);
+							r = setInterval(bgroll, 250);
+						});
+						$imgbox.toggleClass('is-active');
+					} else {
+						alert('可用奖品不足');
+					}
+				});
+				
+			}
+		});
+		loadImgBoxFun();
+		cycleCountFun();
+	});
+}(window.jQuery);
+
+</script>
+]]#

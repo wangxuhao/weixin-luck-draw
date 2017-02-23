@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pojo.PrizeCategoryMapper">
+	<resultMap type="PrizeCategory" id="prizeCategoryMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" jdbcType="VARCHAR" />
+		<result property="prizeItemId" column="prizeItemId" jdbcType="INTEGER" />
+		<result property="prizeItemName" column="prizeItemName" jdbcType="VARCHAR" />
+		<result property="totalNum" column="totalNum" jdbcType="INTEGER" />
+		<result property="effectNum" column="effectNum" jdbcType="INTEGER" />
+	</resultMap>
+	<select id="getPrizeCategoryByItemId" parameterType="PrizeCategory" resultMap="prizeCategoryMap">
+		select * from PrizeCategory where prizeItemId = #{prizeItemId} and effectNum > 0
+	</select>
+	<select id="getPrizeCateCountByItemId" parameterType="PrizeCategory" resultType="int">
+		select sum(effectNum) count from PrizeCategory where prizeItemId = ${prizeItemId}
+	</select>
+	<update id="updatePrizeCategoryById" parameterType="PrizeCategory" flushCache="true" statementType="PREPARED">
+		update PrizeCategory set effectNum = effectNum - 1 where id = #{prizeCategoryId}
+	</update>
+</mapper>

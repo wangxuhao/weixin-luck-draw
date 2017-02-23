@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx.xsd ">
+	
+	<bean id="propertyConfigurer"  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="locations">  
+            <list>  
+                <value>/WEB-INF/jdbc.properties</value>  
+            </list>  
+        </property>  
+    </bean>
+    
+	<!--数据库连接池-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">  
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>  
+		<property name="url" value="${jdbc.url}"/>  
+		<property name="username" value="${jdbc.username}"/>  
+		<property name="password" value="${jdbc.password}"/>  
+		<!-- 启动时的初始值  -->  
+		<property name="initialSize" value="${jdbc.initialSize}"/>   
+		<!-- 连接池的最大值 -->  
+		<property name="maxActive" value="${jdbc.maxActive}"/>  
+		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->  
+		<property name="maxIdle" value="${jdbc.maxIdle}"/>  
+		<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->  
+		<property name="minIdle" value="${jdbc.minIdle}"/>  
+	</bean>  
+     
+     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+	<!--  配置事务传播特性 -->
+	<tx:advice id="DaoAdvice" transaction-manager="transactionManager">
+	    <tx:attributes>
+	      <tx:method name="save*" propagation="REQUIRED"/>
+	      <tx:method name="insert*" propagation="REQUIRED"/>
+	      <tx:method name="del*" propagation="REQUIRED"/>
+	      <tx:method name="update*" propagation="REQUIRED"/>
+	      <tx:method name="add*" propagation="REQUIRED"/>
+	      <tx:method name="find*" propagation="REQUIRED"/>
+	      <tx:method name="get*" propagation="REQUIRED"/>
+	      <tx:method name="apply*" propagation="REQUIRED"/>
+	    </tx:attributes>
+	</tx:advice>
+	<!--  配置参与事务的类 -->
+	<aop:config>
+	<aop:pointcut id="DaoMethod" expression="execution(* com.dao.impl*.*(..))"/>
+	<aop:advisor pointcut-ref="DaoMethod" advice-ref="DaoAdvice" />
+	</aop:config>
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+	<import resource="/weixin-mybatis.xml"/>
+    
+     
+</beans>

@@ -1,0 +1,80 @@
+一月 03, 2017 2:12:51 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 03, 2017 2:12:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 03, 2017 2:12:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 03, 2017 2:12:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 03, 2017 2:12:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 03, 2017 2:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+一月 03, 2017 2:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+一月 03, 2017 2:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@496945a3')
+一月 03, 2017 5:05:36 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:05:36 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+一月 03, 2017 5:05:36 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+一月 03, 2017 5:05:41 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 03, 2017 5:05:41 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 03, 2017 5:05:41 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 03, 2017 5:05:42 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 03, 2017 5:05:45 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:05:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:05:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+一月 03, 2017 5:05:57 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+一月 03, 2017 5:05:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 03, 2017 5:05:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 03, 2017 5:05:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 03, 2017 5:05:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 03, 2017 5:06:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:17:59 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 03, 2017 5:17:59 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 03, 2017 5:17:59 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 03, 2017 5:17:59 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 03, 2017 5:18:05 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:18:09 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+一月 03, 2017 5:18:09 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+一月 03, 2017 5:18:09 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@e12d82f')
+一月 03, 2017 5:46:03 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+一月 03, 2017 5:46:03 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+一月 03, 2017 5:46:03 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+一月 03, 2017 5:46:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 03, 2017 5:46:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 03, 2017 5:46:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 03, 2017 5:46:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 03, 2017 5:46:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'

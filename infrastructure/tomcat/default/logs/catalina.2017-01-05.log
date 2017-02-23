@@ -1,0 +1,196 @@
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server version:        Apache Tomcat/7.0.57
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server built:          Nov 3 2014 08:39:16 UTC
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server number:         7.0.57.0
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Name:               Windows 10
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Version:            10.0
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Architecture:          amd64
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JAVA_HOME:             D:\code\mycode\project-weixin\infrastructure\jdk\default\jre
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Version:           1.8.0_102-b14
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Vendor:            Oracle Corporation
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_BASE:         D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_HOME:         D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xmx1024m
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -XX:MaxNewSize=256m
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -XX:MaxPermSize=256m
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.awt.headless=true
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xdebug
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xnoagent
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xrunjdwp:transport=dt_socket,address=7777,server=y,suspend=n
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DTOMCAT_PORT_HTTP=80
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DTOMCAT_PORT_HTTPS=8443
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DPROFILE_STAMP=a8ee23155196791ddf5e4d0bd86bd8db
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DINSTANCE_STAMP=a8ee23155196791ddf5e4d0bd86bd8db.1483630868652
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.config.file=D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\logging.properties
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.endorsed.dirs=D:\code\mycode\project-weixin\infrastructure\tomcat\default\endorsed
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.base=D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.home=D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:41:13 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.io.tmpdir=D:\code\mycode\project-weixin\infrastructure\tomcat\default\temp
+一月 05, 2017 11:41:13 下午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\code\mycode\project-weixin\infrastructure\jdk\default\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;D:\Program Files\Java\jdk1.8.0_102\bin;D:\Program Files\TortoiseSVN\bin;D:\env\gradle-3.0\bin;D:\Program Files\nodejs\;C:\Users\wangxh\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.
+一月 05, 2017 11:41:14 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-80"]
+一月 05, 2017 11:41:14 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8443"]
+一月 05, 2017 11:41:16 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 5024 ms
+一月 05, 2017 11:41:16 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+一月 05, 2017 11:41:16 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.57
+一月 05, 2017 11:41:16 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\Catalina\localhost\Weixin.xml
+一月 05, 2017 11:41:32 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deployment of configuration descriptor D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\Catalina\localhost\Weixin.xml has finished in 15,917 ms
+一月 05, 2017 11:41:32 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\docs
+一月 05, 2017 11:41:33 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\docs has finished in 200 ms
+一月 05, 2017 11:41:33 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\examples
+一月 05, 2017 11:41:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\examples has finished in 2,321 ms
+一月 05, 2017 11:41:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\host-manager
+一月 05, 2017 11:41:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\host-manager has finished in 350 ms
+一月 05, 2017 11:41:35 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\manager
+一月 05, 2017 11:41:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\manager has finished in 342 ms
+一月 05, 2017 11:41:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\ROOT
+一月 05, 2017 11:41:36 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\ROOT has finished in 139 ms
+一月 05, 2017 11:41:36 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-80"]
+一月 05, 2017 11:41:36 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8443"]
+一月 05, 2017 11:41:36 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 19504 ms
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server version:        Apache Tomcat/7.0.57
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server built:          Nov 3 2014 08:39:16 UTC
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Server number:         7.0.57.0
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Name:               Windows 10
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: OS Version:            10.0
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Architecture:          amd64
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JAVA_HOME:             D:\code\mycode\project-weixin\infrastructure\jdk\default\jre
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Version:           1.8.0_102-b14
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: JVM Vendor:            Oracle Corporation
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_BASE:         D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: CATALINA_HOME:         D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xmx1024m
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -XX:MaxNewSize=256m
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -XX:MaxPermSize=256m
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.awt.headless=true
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xdebug
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xnoagent
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Xrunjdwp:transport=dt_socket,address=7777,server=y,suspend=n
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DTOMCAT_PORT_HTTP=80
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DTOMCAT_PORT_HTTPS=8443
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DPROFILE_STAMP=a8ee23155196791ddf5e4d0bd86bd8db
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -DINSTANCE_STAMP=a8ee23155196791ddf5e4d0bd86bd8db.1483631158602
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.config.file=D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\logging.properties
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.endorsed.dirs=D:\code\mycode\project-weixin\infrastructure\tomcat\default\endorsed
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.base=D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Dcatalina.home=D:\code\mycode\project-weixin\infrastructure\tomcat\default
+一月 05, 2017 11:46:03 下午 org.apache.catalina.startup.VersionLoggerListener log
+信息: Command line argument: -Djava.io.tmpdir=D:\code\mycode\project-weixin\infrastructure\tomcat\default\temp
+一月 05, 2017 11:46:03 下午 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\code\mycode\project-weixin\infrastructure\jdk\default\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;D:\Program Files\Java\jdk1.8.0_102\bin;D:\Program Files\TortoiseSVN\bin;D:\env\gradle-3.0\bin;D:\Program Files\nodejs\;C:\Users\wangxh\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.
+一月 05, 2017 11:46:03 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-80"]
+一月 05, 2017 11:46:03 下午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8443"]
+一月 05, 2017 11:46:06 下午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 4727 ms
+一月 05, 2017 11:46:06 下午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+一月 05, 2017 11:46:06 下午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.57
+一月 05, 2017 11:46:06 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deploying configuration descriptor D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\Catalina\localhost\Weixin.xml
+一月 05, 2017 11:46:23 下午 org.apache.catalina.startup.HostConfig deployDescriptor
+信息: Deployment of configuration descriptor D:\code\mycode\project-weixin\infrastructure\tomcat\default\conf\Catalina\localhost\Weixin.xml has finished in 17,364 ms
+一月 05, 2017 11:46:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\docs
+一月 05, 2017 11:46:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\docs has finished in 254 ms
+一月 05, 2017 11:46:23 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\examples
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\examples has finished in 1,280 ms
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\host-manager
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\host-manager has finished in 215 ms
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\manager
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\manager has finished in 285 ms
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\ROOT
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deployment of web application directory D:\code\mycode\project-weixin\infrastructure\tomcat\default\webapps\ROOT has finished in 175 ms
+一月 05, 2017 11:46:25 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-80"]
+一月 05, 2017 11:46:25 下午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8443"]
+一月 05, 2017 11:46:25 下午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 19809 ms

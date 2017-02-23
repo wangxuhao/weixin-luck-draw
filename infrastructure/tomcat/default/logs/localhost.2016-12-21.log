@@ -1,0 +1,450 @@
+十二月 21, 2016 7:28:49 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:28:49 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 7:28:49 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 7:28:50 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 7:28:53 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 7:28:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 7:28:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 7:28:56 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@5783d6e8')
+十二月 21, 2016 7:30:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:30:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 7:30:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 7:30:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 7:30:15 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 7:30:17 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 7:30:17 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 7:30:18 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@e6b3404')
+十二月 21, 2016 7:30:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 7:30:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 7:30:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 7:31:01 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:31:01 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 7:31:01 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 7:31:01 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 7:31:05 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 7:37:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:37:43 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.Log4jListener
+java.lang.UnsupportedClassVersionError: com/web/util/Log4jListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.Log4jListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:37:43 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.WebContextListener
+java.lang.UnsupportedClassVersionError: com/web/util/WebContextListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.WebContextListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:37:43 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Skipped installing application listeners due to previous error(s)
+十二月 21, 2016 7:37:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 7:37:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 7:37:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@4956de1f')
+十二月 21, 2016 7:38:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:38:58 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.Log4jListener
+java.lang.UnsupportedClassVersionError: com/web/util/Log4jListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.Log4jListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:38:58 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.WebContextListener
+java.lang.UnsupportedClassVersionError: com/web/util/WebContextListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.WebContextListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:38:58 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Skipped installing application listeners due to previous error(s)
+十二月 21, 2016 7:39:09 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:39:09 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.Log4jListener
+java.lang.UnsupportedClassVersionError: com/web/util/Log4jListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.Log4jListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:39:09 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Error configuring application listener of class com.web.util.WebContextListener
+java.lang.UnsupportedClassVersionError: com/web/util/WebContextListener : Unsupported major.minor version 52.0 (unable to load class com.web.util.WebContextListener)
+	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2961)
+	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1210)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1690)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClass(DefaultInstanceManager.java:506)
+	at org.apache.catalina.core.DefaultInstanceManager.loadClassMaybePrivileged(DefaultInstanceManager.java:488)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4909)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:672)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1859)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+
+十二月 21, 2016 7:39:09 下午 org.apache.catalina.core.StandardContext listenerStart
+严重: Skipped installing application listeners due to previous error(s)
+十二月 21, 2016 7:39:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 7:39:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 7:39:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 7:39:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 7:39:41 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 7:39:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 7:39:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 7:39:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@43ad7b8f')
+十二月 21, 2016 9:46:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 9:46:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 9:46:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 9:46:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 9:46:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 9:46:47 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 9:46:47 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 9:46:47 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@532856f8')
+十二月 21, 2016 10:22:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:22:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:22:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:22:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:22:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:22:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:22:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:22:28 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:41:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:41:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:41:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:41:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:42:00 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:42:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+十二月 21, 2016 10:42:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+十二月 21, 2016 10:42:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@71839180')
+十二月 21, 2016 10:54:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:54:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:54:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:54:06 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:54:06 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:54:06 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:54:06 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:54:09 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:56:51 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:56:51 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:56:51 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:56:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:56:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:56:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:56:52 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:56:55 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:57:17 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:57:17 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:57:17 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:57:18 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:57:18 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:57:18 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:57:18 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:57:21 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:57:42 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:57:42 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:57:42 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:57:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:57:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:57:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:57:44 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:57:47 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:58:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:58:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:58:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:58:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:58:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:58:39 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:58:40 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:58:43 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:58:54 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:58:54 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:58:54 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:58:56 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:58:56 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:58:56 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:58:56 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:58:58 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:59:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:59:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:59:10 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:59:11 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:59:11 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:59:11 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:59:11 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:59:14 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:59:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 10:59:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 10:59:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 10:59:26 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 10:59:26 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 10:59:26 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 10:59:26 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 10:59:29 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:07:21 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:07:21 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 11:07:21 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 11:07:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 11:07:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 11:07:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 11:07:22 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 11:07:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:12:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:12:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 11:12:37 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 11:12:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 11:12:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 11:12:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 11:12:38 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 11:12:41 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Destroying Spring FrameworkServlet 'portal-action'
+十二月 21, 2016 11:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Closing Spring root WebApplicationContext
+十二月 21, 2016 11:13:02 下午 org.apache.catalina.core.ApplicationContext log
+信息: Shutting down log4j
+十二月 21, 2016 11:13:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+十二月 21, 2016 11:13:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+十二月 21, 2016 11:13:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+十二月 21, 2016 11:13:04 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+十二月 21, 2016 11:13:07 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'

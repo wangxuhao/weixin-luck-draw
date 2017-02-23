@@ -1,0 +1,32 @@
+一月 05, 2017 11:41:23 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 05, 2017 11:41:23 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 05, 2017 11:41:23 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 05, 2017 11:41:24 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 05, 2017 11:41:30 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 05, 2017 11:41:35 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+一月 05, 2017 11:41:35 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+一月 05, 2017 11:41:35 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@236f4585')
+一月 05, 2017 11:46:12 下午 org.apache.catalina.core.ApplicationContext log
+信息: No Spring WebApplicationInitializer types detected on classpath
+一月 05, 2017 11:46:12 下午 org.apache.catalina.core.ApplicationContext log
+信息: Set web app root system property: 'webapp.root' = [D:\code\mycode\project-weixin\web-apps\weixin\]
+一月 05, 2017 11:46:12 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing log4j from [D:\code\mycode\project-weixin\web-apps\weixin\WEB-INF\log4j.properties]
+一月 05, 2017 11:46:13 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring root WebApplicationContext
+一月 05, 2017 11:46:20 下午 org.apache.catalina.core.ApplicationContext log
+信息: Initializing Spring FrameworkServlet 'portal-action'
+一月 05, 2017 11:46:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+一月 05, 2017 11:46:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+一月 05, 2017 11:46:25 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@71fd6656')

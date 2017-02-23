@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/> 
+	<link rel="stylesheet" href="css/shake.css">
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+	<script type="text/javascript" src="js/shake.js"></script>
+    <title>玉湖集团-摇一摇抢红包</title>
+</head>
+<body>
+<div class="shake_box">
+	<input type="hidden" name="mId" value="$!mId"/>
+	<audio src="sound/shake_sound.mp3" preload="auto" id="audio"></audio>
+	<div class="shakTop"><span></span></div>
+	<div class="shakBottom"><span></span></div>
+	<div class="shakResult"></div>
+	<div class="shakPrize"><span class="prizeSpan">恭喜发财</span></div>
+</div>
+#[[
+<script type="text/javascript">
+
+void function($){
+	$(function(){
+	  
+		var myShakeEvent = new Shake({
+			threshold: 10
+		});
+
+		myShakeEvent.start();
+
+		window.addEventListener('shake', shakeEventDidOccur, false);
+
+		function shakeEventDidOccur () {
+			//摇一摇声音
+			var shakeAudio = $("#audio")[0];
+			shakeAudio.play();
+			
+			//播放动画
+			$('.shake_box').addClass('shake_box_focus');
+			clearTimeout(shakeTimeout);
+			var shakeTimeout = setTimeout(function(){
+				$('.shake_box').removeClass('shake_box_focus');
+			},1000);
+			
+			
+			var arr = [false,false,false,true,false,true];
+			var num = Math.floor(Math.random()*6);
+			if(arr[num]){
+				$(".shakPrize").removeClass('prizeShow');
+				var resultEl = $(".shakResult").removeClass('resultShow');
+				getShakeResult(resultEl);
+			}else{
+				$(".shakResult").removeClass('resultShow');
+				$('.prizeSpan').text('恭喜发财');
+				$(".shakPrize").toggleClass('prizeShow');
+				
+			}
+		}
+		
+		function getShakeResult(resultEl) {
+			var mId = $('[name=mId]').val();
+			if(parseInt(mId) > 0){
+                $.post('calcuLotteryShake.action',{mId:mId},
+				function(data){
+					var items = JSON.parse(data);
+					if(items.length > 0){
+						if(items[0].id > 0){
+							//resultEl.text('恭喜，摇得"'+items[0].name+'"!');
+							//resultEl.addClass('resultShow');
+							$('.prizeSpan').text(items[0].name);
+							$(".shakPrize").addClass('prizeShow');
+						}else{
+							resultEl.text(items[0].name+'!');
+							resultEl.addClass('resultShow');
+						}
+					}
+                });
+            }
+		}
+		
+	});
+}(window.jQuery);
+
+</script>
+]]#
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pojo.MemberMapper">
+	<resultMap type="Member" id="memberMap">
+		<id property="mid" column="mid" />
+		<result property="wxOpenId" column="wxOpenId" jdbcType="VARCHAR" />
+		<result property="nickname" column="nickname" jdbcType="VARCHAR" />
+		<result property="sex" column="sex" jdbcType="INTEGER" />
+		<result property="city" column="city" jdbcType="VARCHAR" />
+		<result property="country" column="country" jdbcType="VARCHAR" />
+		<result property="province" column="province" jdbcType="VARCHAR" />
+		<result property="headimgurl" column="headimgurl" jdbcType="VARCHAR" />
+		<result property="subscribeTime" column="subscribeTime" jdbcType="TIMESTAMP" />
+		<result property="realname" column="realname" jdbcType="VARCHAR" />
+		<result property="phone" column="phone" jdbcType="VARCHAR" />
+		<result property="isbid" column="isbid" jdbcType="INTEGER" />
+	</resultMap>
+	<select id="getMemberById" parameterType="Member" resultMap="memberMap">
+		select * from Members where mid = #{mid}
+	</select>
+	<select id="getMemberByWxOpenId" parameterType="Member" resultMap="memberMap">
+		select * from Members where wxOpenId = #{wxOpenId}
+	</select>
+	<select id="getAllMember" parameterType="Member" resultMap="memberMap">
+		select * from Members group by wxopenid order by mid
+	</select>
+	<select id="getAllValidMember" parameterType="Member" resultMap="memberMap">
+		select * from Members where realname is not null and realname !='' and phone is not null and phone !='' group by wxopenid order by mid</select>
+	<select id="getAllMember4Draw" parameterType="Member" resultMap="memberMap">
+		select * from Members where realname is not null and phone is not null and isbid = 0 
+	</select>
+	<select id="getOtherMember4Draw" parameterType="Member" resultMap="memberMap">
+		select * from Members where realname is not null and phone is not null and isbid = 0 and willwin = 0
+	</select>
+	<select id="getWinMembers" parameterType="Map" resultMap="memberMap">
+		select * from members where isbid = 0 and willwin = #{prizeItemId}  LIMIT #{num}
+	</select>
+	<delete id="deleteMemberById" parameterType="Member" flushCache="true" statementType="PREPARED">
+		delete from Members where mid = #{mid}
+	</delete>
+	<update id="updateMember" parameterType="Member" flushCache="true" statementType="PREPARED">
+		update Members set realname = #{realname}, phone = #{phone} where mid = #{mid}
+	</update>
+	<update id="updateMemberByBid" parameterType="Member" flushCache="true" statementType="PREPARED">
+		update Members set isbid = 1 where mid = #{mid}
+	</update>
+	<insert id="insertMember" parameterType="Member" useGeneratedKeys="true" keyProperty="mid"> <!--设置主键，getGeneratedKeys方法获取 -->
+		insert into Members(wxOpenId,nickname,sex,city,country,province,headimgurl,subscribeTime,willwin)
+		values(#{wxOpenId},#{nickname},#{sex},#{city},#{country},#{province},#{headimgurl},#{subscribeTime},0)
+	</insert>
+</mapper>

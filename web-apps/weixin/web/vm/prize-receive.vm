@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/> 
+	<link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+    <title>玉湖集团-奖品领取</title>
+</head>
+<body>
+<div class="prize-query	prizebox">
+	<p class="page-tip">提示：此功能只是在兑换奖品时由工作人员确认使用，非工作人员请勿进行任何操作。若操作则视为放弃中奖！</p>
+    <div class="prize-box">
+    <h2>奖品领取</h2>
+        #if($winningList.size() > 0)
+        <table>
+            <thead>
+                <tr>
+                    <th >奖项</th>
+                    <th >奖品名</th>
+                    <th >数量</th>
+                    <th >状态</th>
+                    <th >操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            #set($isChased = 0)
+                #foreach($winning in $winningList)
+                <tr id='$winning.id'>
+                    <td>$winning.prizeItemName</td>
+                    <td>#if($winning.prizeCategoryName) $winning.prizeCategoryName #else $winning.prizeItemName #end</td>
+                    <td>$winning.amount</td>
+                    #if($winning.isCashed == 1) 
+                       <td>已兑换</td>
+                       <td><button class="claim-prize" disabled="true" style="background-color:#eee;">已领取奖品</button></td>
+                    #else
+                        <td>未兑换</td>
+                        <td><button class="claim-prize">领取奖品</button></td> 
+                    #end
+                </tr>
+                #end
+            </tbody>
+        </table>
+        #else
+        <p class="prize-tip">很遗憾，您没有中奖！</p>
+        #end
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('.claim-prize').click(function(){
+            if(confirm("请由工作人员进行奖品领取确认！")){
+                var winningId = $(this).closest('tr').attr('id');
+                $.post('cashByMId.action',{winningId:winningId},function(){});
+                $(this).css('background-color','#eee');
+                $(this).attr('disabled','true');
+                $(this).text('已领取奖品');
+                $(this).closest('tr').find('td').eq(3).text('已兑换');
+            }
+        });
+    })
+</script>
+</body>
+</html>

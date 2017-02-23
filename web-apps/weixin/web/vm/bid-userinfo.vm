@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta  http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript" src="js/nr-source-loader.js"></script>
+<link href="styles/wx/paxy/paxy.css" rel="stylesheet" type="text/css">
+
+  
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+    <title>玉湖集团-个人信息绑定</title>
+</head>
+<body id="onlinebooking" style="">
+	<div class="cardexplain" id="content">
+			<ul class="round" >
+				<li class="title mb"><span class="none">提示：请绑定您的姓名及手机号，否则您将无法抽奖</span></li>
+				 #if($member.realname && $member.realname != '')
+					<li class="nob">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+						<tbody>
+							<tr>
+								<th id="th_realname">真实姓名</th>
+								<td>
+									<input name="name" class="px name" id="realname" type="text" value="$member.realname">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				<li class="nob">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+						<tbody>
+							<tr>
+								<th id="th_phone">手机号：</th>
+								<td>
+									<input name="phone" class="px tel" id="phone" type="text" maxlength="11" min="11" value="$member.phone" >
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				 </ul>
+			   	<div class="footReturn">
+				<input type="submit" id="showcard" class="submit btn blue" style="width:100%;background-color:#eee;" value="用户已绑定"  disabled="true"  >
+				<div class="window" id="windowcenter">
+					<div id="title" class="wtitle">
+						操作提示<span class="close" id="alertclose"></span>
+					</div>
+					<div class="content">
+						<div id="txt"></div>
+					</div>
+				</div>
+			</div>
+				    #else
+					<li class="nob">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+						<tbody>
+							<tr>
+								<th id="th_realname">真实姓名</th>
+								<td>
+									<input name="name" class="px name" id="realname" type="text" value="">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				<li class="nob">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+						<tbody>
+							<tr>
+								<th id="th_phone">手机号：</th>
+								<td>
+									<input name="phone" class="px tel" id="phone" type="text" maxlength="11" min="11" value="" >
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				  </ul>
+			   	<div class="footReturn">
+				<input type="submit" id="showcard" class="submit btn blue" style="width:100%" value="提交绑定">
+				<div class="window" id="windowcenter">
+					<div id="title" class="wtitle">
+						操作提示<span class="close" id="alertclose"></span>
+					</div>
+					<div class="content">
+						<div id="txt"></div>
+					</div>
+				</div>
+			</div>
+			   #end
+			  
+ 
+</div>
+<script type="text/javascript">
+	var oLay = document.getElementById("overlay");
+				$(document).ready(function() {
+					$("#showcard").click(function() {
+						//$("#th_wxh.redfont").removeClass("redfont");
+						$("#th_realname.redfont").removeClass("redfont");
+						$("#th_bbmy.redfont").removeClass("redfont");
+						if ($("#realname").val() == '' || $.trim($("#realname").val()).length<1) {
+							$("#th_realname").addClass("redfont");
+							alert('【真实姓名】不能为空');
+							return false;
+						}
+var phone = $.trim($("#phone").val());
+						if (phone == '' || phone.length!=11) {
+							$("#th_phone").addClass("redfont");
+							alert('【手机】不能为空且是11位数字');
+							return false;
+						}
+							for (var i = 0; i < phone.length; i++) {  
+		                     //charAt()获取指定位置字符串,charCodeAt()返回该字符串的编码  
+		                        //0的ASCII是48,9的ASCII是57  
+		                     var code = phone.charAt(i).charCodeAt(0);  
+		                     if (code < 48 || code > 57) {  
+		                    	 $("#th_phone").addClass("redfont");
+		                    	 alert('手机只能是11位数字');
+								 return false;  
+		                     };
+		                } 
+						if (confirm("请确认以下信息正确:\n手机号码:["+phone+"]\真实姓名:["+$("#realname").val() +"]\n 是否继续?")) {
+							 
+						 var name = $('.name').val(),
+            mobilePhone = $('.tel').val();
+						$('#showcard').attr('disabled','disabled');
+					 
+					   $.post('bindUserInfo.action',{name:name,mobilePhone:mobilePhone},function(){
+                    alert('绑定成功，请返回体验其他功能');
+                     $('#showcard').attr('disabled','disabled');
+					 $('#showcard').val('用户已绑定');
+					  $('#showcard').attr('background-color','#eee');
+					  
+                });
+					
+						}else{
+							return false;
+						}
+						
+					 	});
+				});
+					$("#windowclosebutton").click(function() {
+					$("#windowcenter").slideUp(500);
+					oLay.style.display = "none";
+	
+				});
+				$("#alertclose").click(function() {
+					$("#windowcenter").slideUp(500);
+					oLay.style.display = "none";
+	
+				});
+				function alert(title) {
+					$("#windowcenter").slideToggle("slow");
+					$("#txt").html(title);
+					//$("#windowcenter").hide("slow"); 
+					setTimeout('$("#windowcenter").slideUp(1500)', 5000);
+				}		
+ 
+</script>
+</body>
+</html>

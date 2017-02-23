@@ -1,0 +1,1519 @@
+html, body {
+  width: 100vw;
+  height: 100vh; }
+
+body {
+  min-width: 840px;
+  margin: 0;
+  overflow: hidden;
+  perspective: 1000px;
+  background-color: #eeeeee; }
+
+.sphere {
+  transition: all 400ms ease-in-out; }
+  .sphere, .sphere *, .sphere *:before, .sphere *:after {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform-style: preserve-3d;
+    pointer-events: none; }
+  .sphere.has-child-selected {
+    transform: translateZ(-120px) rotateX(8deg) scale(0.95); }
+
+.sphere__roller {
+  animation-fill-mode: forwards; }
+
+.is-active.sphere .sphere__roller {
+  animation: rot 200s linear infinite; }
+
+.sphere__ring-figure {
+  margin: -16px;
+  width: 32px;
+  height: 32px;
+  backface-visibility: hidden;
+  transition: all 400ms ease-in-out; }
+.sphere__ring-image {
+  pointer-events: auto;
+  margin: -16px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+  transition: all 400ms ease-in-out; }
+
+.sphere__ring-figure.is-selected .sphere__ring-image {
+  opacity: 1 !important;
+  transform: scale(5) !important; }
+
+.sphere__ring:nth-child(1) {
+  transform: translateY(0px); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 0px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(7.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(14.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(21.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(28.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(36deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(43.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(50.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(57.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(64.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(72deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(79.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(86.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(93.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(100.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(108deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(115.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(122.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(129.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(136.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(144deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(151.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(158.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(165.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(172.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(180deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(187.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(194.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(201.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(208.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(216deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(223.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(230.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(237.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(244.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(252deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(259.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(266.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(273.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(280.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(288deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(295.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(302.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(309.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(316.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(46) {
+    transform: rotateY(324deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(47) {
+    transform: rotateY(331.2deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(48) {
+    transform: rotateY(338.4deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(49) {
+    transform: rotateY(345.6deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(50) {
+    transform: rotateY(352.8deg) translateZ(281px) rotateX(0); }
+  .sphere__ring:nth-child(1) .sphere__ring-figure:nth-child(n+51) {
+    display: none; }
+
+.sphere__ring:nth-child(2) {
+  transform: translateY(-39.10764px); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 39.10764px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(7.34694deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(14.69388deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(22.04082deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(29.38776deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(36.73469deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(44.08163deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(51.42857deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(58.77551deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(66.12245deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(73.46939deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(80.81633deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(88.16327deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(95.5102deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(102.85714deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(110.20408deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(117.55102deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(124.89796deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(132.2449deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(139.59184deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(146.93878deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(154.28571deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(161.63265deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(168.97959deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(176.32653deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(183.67347deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(191.02041deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(198.36735deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(205.71429deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(213.06122deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(220.40816deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(227.7551deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(235.10204deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(242.44898deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(249.79592deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(257.14286deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(264.4898deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(271.83673deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(279.18367deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(286.53061deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(293.87755deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(301.22449deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(308.57143deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(315.91837deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(323.26531deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(46) {
+    transform: rotateY(330.61224deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(47) {
+    transform: rotateY(337.95918deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(48) {
+    transform: rotateY(345.30612deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(49) {
+    transform: rotateY(352.65306deg) translateZ(278.26533px) rotateX(8deg); }
+  .sphere__ring:nth-child(2) .sphere__ring-figure:nth-child(n+50) {
+    display: none; }
+
+.sphere__ring:nth-child(3) {
+  transform: translateY(39.10764px); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -39.10764px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(7.34694deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(14.69388deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(22.04082deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(29.38776deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(36.73469deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(44.08163deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(51.42857deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(58.77551deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(66.12245deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(73.46939deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(80.81633deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(88.16327deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(95.5102deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(102.85714deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(110.20408deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(117.55102deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(124.89796deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(132.2449deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(139.59184deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(146.93878deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(154.28571deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(161.63265deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(168.97959deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(176.32653deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(183.67347deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(191.02041deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(198.36735deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(205.71429deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(213.06122deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(220.40816deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(227.7551deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(235.10204deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(242.44898deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(249.79592deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(257.14286deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(264.4898deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(271.83673deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(279.18367deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(286.53061deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(293.87755deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(301.22449deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(308.57143deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(315.91837deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(323.26531deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(46) {
+    transform: rotateY(330.61224deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(47) {
+    transform: rotateY(337.95918deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(48) {
+    transform: rotateY(345.30612deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(49) {
+    transform: rotateY(352.65306deg) translateZ(278.26533px) rotateX(-8deg); }
+  .sphere__ring:nth-child(3) .sphere__ring-figure:nth-child(n+50) {
+    display: none; }
+
+.sphere__ring:nth-child(4) {
+  transform: translateY(-77.4541px); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 77.4541px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(7.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(15deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(22.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(30deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(37.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(45deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(52.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(60deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(67.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(75deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(82.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(90deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(97.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(105deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(112.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(120deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(127.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(135deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(142.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(150deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(157.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(165deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(172.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(180deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(187.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(195deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(202.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(210deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(217.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(225deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(232.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(240deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(247.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(255deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(262.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(270deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(277.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(285deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(292.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(300deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(307.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(315deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(322.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(330deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(46) {
+    transform: rotateY(337.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(47) {
+    transform: rotateY(345deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(48) {
+    transform: rotateY(352.5deg) translateZ(270.11454px) rotateX(16deg); }
+  .sphere__ring:nth-child(4) .sphere__ring-figure:nth-child(n+49) {
+    display: none; }
+
+.sphere__ring:nth-child(5) {
+  transform: translateY(77.4541px); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -77.4541px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(7.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(15deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(22.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(30deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(37.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(45deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(52.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(60deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(67.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(75deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(82.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(90deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(97.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(105deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(112.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(120deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(127.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(135deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(142.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(150deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(157.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(165deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(172.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(180deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(187.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(195deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(202.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(210deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(217.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(225deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(232.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(240deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(247.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(255deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(262.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(270deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(277.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(285deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(292.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(300deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(307.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(315deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(322.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(330deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(46) {
+    transform: rotateY(337.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(47) {
+    transform: rotateY(345deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(48) {
+    transform: rotateY(352.5deg) translateZ(270.11454px) rotateX(-16deg); }
+  .sphere__ring:nth-child(5) .sphere__ring-figure:nth-child(n+49) {
+    display: none; }
+
+.sphere__ring:nth-child(6) {
+  transform: translateY(-114.293px); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 114.293px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(8deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(16deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(24deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(32deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(40deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(48deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(56deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(64deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(72deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(80deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(88deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(96deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(104deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(112deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(120deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(128deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(136deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(144deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(152deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(160deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(168deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(176deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(184deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(192deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(200deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(208deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(216deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(224deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(232deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(240deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(248deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(256deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(264deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(272deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(280deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(288deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(296deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(304deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(312deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(320deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(328deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(336deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(344deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(352deg) translateZ(256.70627px) rotateX(24deg); }
+  .sphere__ring:nth-child(6) .sphere__ring-figure:nth-child(n+46) {
+    display: none; }
+
+.sphere__ring:nth-child(7) {
+  transform: translateY(114.293px); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -114.293px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(8deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(16deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(24deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(32deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(40deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(48deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(56deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(64deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(72deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(80deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(88deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(96deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(104deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(112deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(120deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(128deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(136deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(144deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(152deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(160deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(168deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(176deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(184deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(192deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(200deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(208deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(216deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(224deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(232deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(240deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(248deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(256deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(264deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(272deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(280deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(288deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(296deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(304deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(312deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(320deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(328deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(43) {
+    transform: rotateY(336deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(44) {
+    transform: rotateY(344deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(45) {
+    transform: rotateY(352deg) translateZ(256.70627px) rotateX(-24deg); }
+  .sphere__ring:nth-child(7) .sphere__ring-figure:nth-child(n+46) {
+    display: none; }
+
+.sphere__ring:nth-child(8) {
+  transform: translateY(-148.90731px); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 148.90731px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(8.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(17.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(25.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(34.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(42.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(51.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(60deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(68.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(77.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(85.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(94.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(102.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(111.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(120deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(128.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(137.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(145.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(154.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(162.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(171.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(180deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(188.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(197.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(205.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(214.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(222.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(231.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(240deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(248.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(257.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(265.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(274.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(282.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(291.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(300deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(308.57143deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(317.14286deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(325.71429deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(334.28571deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(342.85714deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(351.42857deg) translateZ(238.30152px) rotateX(32deg); }
+  .sphere__ring:nth-child(8) .sphere__ring-figure:nth-child(n+43) {
+    display: none; }
+
+.sphere__ring:nth-child(9) {
+  transform: translateY(148.90731px); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -148.90731px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(8.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(17.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(25.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(34.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(42.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(51.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(60deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(68.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(77.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(85.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(94.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(102.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(111.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(120deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(128.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(137.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(145.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(154.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(162.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(171.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(180deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(188.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(197.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(205.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(214.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(222.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(231.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(240deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(248.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(257.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(265.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(274.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(282.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(291.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(300deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(308.57143deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(317.14286deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(39) {
+    transform: rotateY(325.71429deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(40) {
+    transform: rotateY(334.28571deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(41) {
+    transform: rotateY(342.85714deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(42) {
+    transform: rotateY(351.42857deg) translateZ(238.30152px) rotateX(-32deg); }
+  .sphere__ring:nth-child(9) .sphere__ring-figure:nth-child(n+43) {
+    display: none; }
+
+.sphere__ring:nth-child(10) {
+  transform: translateY(-180.62332px); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 180.62332px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(9.47368deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(18.94737deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(28.42105deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(37.89474deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(47.36842deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(56.84211deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(66.31579deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(75.78947deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(85.26316deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(94.73684deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(104.21053deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(113.68421deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(123.15789deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(132.63158deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(142.10526deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(151.57895deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(161.05263deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(170.52632deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(180deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(189.47368deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(198.94737deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(208.42105deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(217.89474deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(227.36842deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(236.84211deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(246.31579deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(255.78947deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(265.26316deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(274.73684deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(284.21053deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(293.68421deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(303.15789deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(312.63158deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(322.10526deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(331.57895deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(341.05263deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(350.52632deg) translateZ(215.25849px) rotateX(40deg); }
+  .sphere__ring:nth-child(10) .sphere__ring-figure:nth-child(n+39) {
+    display: none; }
+
+.sphere__ring:nth-child(11) {
+  transform: translateY(180.62332px); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -180.62332px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(9.47368deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(18.94737deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(28.42105deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(37.89474deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(47.36842deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(56.84211deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(66.31579deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(75.78947deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(85.26316deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(94.73684deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(104.21053deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(113.68421deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(123.15789deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(132.63158deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(142.10526deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(151.57895deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(161.05263deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(170.52632deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(180deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(189.47368deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(198.94737deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(208.42105deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(217.89474deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(227.36842deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(236.84211deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(246.31579deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(255.78947deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(265.26316deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(274.73684deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(284.21053deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(293.68421deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(303.15789deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(34) {
+    transform: rotateY(312.63158deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(35) {
+    transform: rotateY(322.10526deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(36) {
+    transform: rotateY(331.57895deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(37) {
+    transform: rotateY(341.05263deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(38) {
+    transform: rotateY(350.52632deg) translateZ(215.25849px) rotateX(-40deg); }
+  .sphere__ring:nth-child(11) .sphere__ring-figure:nth-child(n+39) {
+    display: none; }
+
+.sphere__ring:nth-child(12) {
+  transform: translateY(-208.8237px); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 208.8237px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(10.90909deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(21.81818deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(32.72727deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(43.63636deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(54.54545deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(65.45455deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(76.36364deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(87.27273deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(98.18182deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(109.09091deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(120deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(130.90909deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(141.81818deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(152.72727deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(163.63636deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(174.54545deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(185.45455deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(196.36364deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(207.27273deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(218.18182deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(229.09091deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(240deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(250.90909deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(261.81818deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(272.72727deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(283.63636deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(294.54545deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(305.45455deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(316.36364deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(327.27273deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(338.18182deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(349.09091deg) translateZ(188.0257px) rotateX(48deg); }
+  .sphere__ring:nth-child(12) .sphere__ring-figure:nth-child(n+34) {
+    display: none; }
+
+.sphere__ring:nth-child(13) {
+  transform: translateY(208.8237px); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -208.8237px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(10.90909deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(21.81818deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(32.72727deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(43.63636deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(54.54545deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(65.45455deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(76.36364deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(87.27273deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(98.18182deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(109.09091deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(120deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(130.90909deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(141.81818deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(152.72727deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(163.63636deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(174.54545deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(185.45455deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(196.36364deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(207.27273deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(218.18182deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(229.09091deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(240deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(250.90909deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(261.81818deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(272.72727deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(283.63636deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(294.54545deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(29) {
+    transform: rotateY(305.45455deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(30) {
+    transform: rotateY(316.36364deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(31) {
+    transform: rotateY(327.27273deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(32) {
+    transform: rotateY(338.18182deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(33) {
+    transform: rotateY(349.09091deg) translateZ(188.0257px) rotateX(-48deg); }
+  .sphere__ring:nth-child(13) .sphere__ring-figure:nth-child(n+34) {
+    display: none; }
+
+.sphere__ring:nth-child(14) {
+  transform: translateY(-232.95956px); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 232.95956px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(12.85714deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(25.71429deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(38.57143deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(51.42857deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(64.28571deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(77.14286deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(90deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(102.85714deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(115.71429deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(128.57143deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(141.42857deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(154.28571deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(167.14286deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(180deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(192.85714deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(205.71429deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(218.57143deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(231.42857deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(244.28571deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(257.14286deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(270deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(282.85714deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(295.71429deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(308.57143deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(321.42857deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(334.28571deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(347.14286deg) translateZ(157.13321px) rotateX(56deg); }
+  .sphere__ring:nth-child(14) .sphere__ring-figure:nth-child(n+29) {
+    display: none; }
+
+.sphere__ring:nth-child(15) {
+  transform: translateY(232.95956px); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -232.95956px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(12.85714deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(25.71429deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(38.57143deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(51.42857deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(64.28571deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(77.14286deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(90deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(102.85714deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(115.71429deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(128.57143deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(141.42857deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(154.28571deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(167.14286deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(180deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(192.85714deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(205.71429deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(218.57143deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(231.42857deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(244.28571deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(257.14286deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(22) {
+    transform: rotateY(270deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(23) {
+    transform: rotateY(282.85714deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(24) {
+    transform: rotateY(295.71429deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(25) {
+    transform: rotateY(308.57143deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(26) {
+    transform: rotateY(321.42857deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(27) {
+    transform: rotateY(334.28571deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(28) {
+    transform: rotateY(347.14286deg) translateZ(157.13321px) rotateX(-56deg); }
+  .sphere__ring:nth-child(15) .sphere__ring-figure:nth-child(n+29) {
+    display: none; }
+
+.sphere__ring:nth-child(16) {
+  transform: translateY(-252.56113px); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, 252.56113px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(17.14286deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(34.28571deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(51.42857deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(68.57143deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(85.71429deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(102.85714deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(120deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(137.14286deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(154.28571deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(171.42857deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(188.57143deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(205.71429deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(222.85714deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(240deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(257.14286deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(274.28571deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(291.42857deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(308.57143deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(325.71429deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(342.85714deg) translateZ(123.18229px) rotateX(64deg); }
+  .sphere__ring:nth-child(16) .sphere__ring-figure:nth-child(n+22) {
+    display: none; }
+
+.sphere__ring:nth-child(17) {
+  transform: translateY(252.56113px); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure.is-selected {
+    transform: scale(1.05263) rotateX(-8deg) translateZ(120px) translate3d(0, -252.56113px, 300px) rotateX(0deg) rotateY(0deg) rotate(0deg) !important; }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(2) {
+    transform: rotateY(17.14286deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(3) {
+    transform: rotateY(34.28571deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(4) {
+    transform: rotateY(51.42857deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(5) {
+    transform: rotateY(68.57143deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(6) {
+    transform: rotateY(85.71429deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(7) {
+    transform: rotateY(102.85714deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(8) {
+    transform: rotateY(120deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(9) {
+    transform: rotateY(137.14286deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(10) {
+    transform: rotateY(154.28571deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(11) {
+    transform: rotateY(171.42857deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(12) {
+    transform: rotateY(188.57143deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(13) {
+    transform: rotateY(205.71429deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(14) {
+    transform: rotateY(222.85714deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(15) {
+    transform: rotateY(240deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(16) {
+    transform: rotateY(257.14286deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(17) {
+    transform: rotateY(274.28571deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(18) {
+    transform: rotateY(291.42857deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(19) {
+    transform: rotateY(308.57143deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(20) {
+    transform: rotateY(325.71429deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(21) {
+    transform: rotateY(342.85714deg) translateZ(123.18229px) rotateX(-64deg); }
+  .sphere__ring:nth-child(17) .sphere__ring-figure:nth-child(n+22) {
+    display: none; }
+
+@keyframes size_a {
+  0%, 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.6); } }
+@keyframes rot {
+  to {
+    transform: rotateY(-2turn); } }
+.controls {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background: rgba(136, 134, 160, 0.23); }
+
+.controls__btn {
+  padding: 6px 12px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.controls__btn-rotate {
+  width: 80px;
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd; }

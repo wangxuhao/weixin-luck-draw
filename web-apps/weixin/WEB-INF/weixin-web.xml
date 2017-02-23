@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!--自动扫描相关的Controller -->
+	<context:component-scan base-package="com.web.action" />
+	<!--对标注@Autowired的Bean自动注入 -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+	</bean>
+	<!--component -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.dao.impl">
+	</context:component-scan>
+
+	<!-- velocity模板配置 -->
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/web/vm/" />
+		<property name="velocityProperties">
+			<props>
+				<prop key="input.encoding">UTF-8</prop><!-- 指定模板引擎进行模板处理的编码 -->
+				<prop key="output.encoding">UTF-8</prop><!-- 指定输出流的编码 -->
+				<prop key="contentType">text/html;charset=UTF-8</prop><!-- contentType -->
+				<prop key=" file.resource.loader.cache">false</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="velocityViewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver"
+		p:suffix=".vm" p:cache="true" p:contentType="text/html;charset=UTF-8">
+		<property name="dateToolAttribute">
+			<value>date</value>
+		</property>
+	</bean>
+	
+    <!-- 返回json,需要导入 fastjson.jar包 -->  
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="false">
+			<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
+			<bean id="fastJsonHttpMessageConverter"
+				class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<!-- 这里顺序不能反，一定先写text/html,不然ie下出现下载提示 -->
+						<value>text/html;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+</beans>

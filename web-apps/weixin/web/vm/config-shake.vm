@@ -1,0 +1,99 @@
+#parse("header.vm")
+<input type="hidden" name="mId" value="$!mId"/>
+<div class="box" id="main-container">
+    <div class="topIMG"><a href="index.html" ><img src="images/logo.png" style="width:100%;height:80px"></img></a></div>
+    <div class="botIMG"></div>
+    <div class="content clearfix">
+        <div class="logo">
+        </div>
+    </div>
+    <div class="RedPack">
+        <div class="title">
+            <p>2016年玉湖集团年会庆典</p>
+            <p>红包雨</p>
+        </div>
+        <div class="items clearfix">
+            <ul>
+			#foreach($item in $shakeRoundList)
+				<li>
+					<a class="items-${item.roundno} #if(${item.status}==2) active-a#end" ></a>
+                </li>
+			#end
+            </ul>
+        </div>
+        <div class="start-a">
+			<input type="button" value="活动开始"/>
+        </div>
+    </div>
+</div>
+#[[
+<script type="text/javascript">
+
+void function($){
+	$(function(){
+	    
+	    var index = 0;
+		var countdown = 60;
+		var timer = null;
+		var btnDom = $('.start-a input:button');
+		
+		$('.items li').click(function(){
+            $(this).removeClass('opacity');
+            $(this).siblings().addClass('opacity');
+			index = $(this).index();
+			if(!$(this).find('a').hasClass('active-a')){
+				$.post('switchLotteryShake.action',{roundNo:index+1,status:0},
+					function(data){
+						var jsonData = JSON.parse(data);
+						if(jsonData.code<0){
+							alert(jsonData.description);
+						}else{
+							clearTimeout(timer);
+							countdown = 60;
+							btnDom.attr("disabled",false);
+							btnDom.val("活动开始");
+						}
+				});
+			}
+        });
+		
+		var endThisRound = function(roundNo,callback){
+			if (countdown == 0) {    
+				$.post('switchLotteryShake.action',{roundNo:roundNo,status:2},callback);
+				return;
+			} else { 
+				btnDom.attr("disabled", true); 
+				btnDom.val("倒计时(" + countdown + "S)"); 
+				countdown--; 
+			} 
+			timer = setTimeout(function(){ 
+				endThisRound(roundNo,callback);
+			},1000);
+		};
+		
+		btnDom.click(function(){
+			var currDom = $('.items li a').eq(index);
+			if(!currDom.hasClass('active-a')){
+				$.post('switchLotteryShake.action',{roundNo:index+1,status:1},
+				function(data){
+					var jsonData = JSON.parse(data);
+					if(jsonData.code<0){
+						alert(jsonData.description);
+					}else{
+						endThisRound(index+1,
+							function(){
+								currDom.addClass('active-a');
+								btnDom.val('本轮结束');
+						});
+					}
+				});
+			}else{
+				alert('该轮红包雨已结束!');
+			}
+		});
+		
+	});
+}(window.jQuery);
+
+</script>
+]]#

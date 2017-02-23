@@ -1,0 +1,168 @@
+161205 17:42:37 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+InnoDB: The first specified data file .\ibdata1 did not exist:
+InnoDB: a new database to be created!
+161205 17:42:37  InnoDB: Setting file .\ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+161205 17:42:37  InnoDB: Log file .\ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+161205 17:42:37  InnoDB: Log file .\ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+161205 17:42:38 InnoDB 1.1.2 started; log sequence number 0
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_CURRENT' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_HISTORY' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_HISTORY_LONG' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'SETUP_CONSUMERS' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'SETUP_INSTRUMENTS' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'SETUP_TIMERS' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'PERFORMANCE_TIMERS' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'THREADS' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_BY_THREAD_BY_EVENT_NAME' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_BY_INSTANCE' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_GLOBAL_BY_EVENT_NAME' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'FILE_SUMMARY_BY_EVENT_NAME' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'FILE_SUMMARY_BY_INSTANCE' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'MUTEX_INSTANCES' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'RWLOCK_INSTANCES' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'COND_INSTANCES' has the wrong structure
+161205 17:42:38 [ERROR] Native table 'performance_schema'.'FILE_INSTANCES' has the wrong structure
+161205 17:42:38 [Note] Event Scheduler: Loaded 0 events
+161205 17:42:38 [Note] bin\mysqld.exe: ready for connections.
+Version: '5.5.6-rc'  socket: ''  port: 3306  MySQL Community Server (GPL)
+161205 17:44:30 [Note] bin\mysqld.exe: Normal shutdown
+
+161205 17:44:30 [Note] Event Scheduler: Purging the queue. 0 events
+161205 17:44:32 [Warning] bin\mysqld.exe: Forcing close of thread 2  user: 'root'
+
+161205 17:44:32 [Warning] bin\mysqld.exe: Forcing close of thread 1  user: 'root'
+
+161205 17:44:32  InnoDB: Starting shutdown...
+161205 17:44:34  InnoDB: Shutdown completed; log sequence number 1595675
+161205 17:44:34 [Note] bin\mysqld.exe: Shutdown complete
+
+161205 17:46:04 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161205 17:46:04  InnoDB: highest supported file format is Barracuda.
+161205 17:46:05 InnoDB 1.1.2 started; log sequence number 1595675
+161205 17:54:01 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161205 17:54:01  InnoDB: highest supported file format is Barracuda.
+161205 17:54:09 InnoDB 1.1.2 started; log sequence number 1595675
+161209 15:02:24 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161209 15:02:24  InnoDB: highest supported file format is Barracuda.
+161209 15:02:24 InnoDB 1.1.2 started; log sequence number 1595675
+161210 11:47:42 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161210 11:47:42  InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+161210 11:47:42  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+161210 11:47:43 InnoDB 1.1.2 started; log sequence number 1600472
+161210 12:00:18 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161210 12:00:18  InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+161210 12:00:18  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+161210 12:00:18 InnoDB 1.1.2 started; log sequence number 1600482
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_CURRENT' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_HISTORY' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_HISTORY_LONG' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'SETUP_CONSUMERS' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'SETUP_INSTRUMENTS' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'SETUP_TIMERS' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'PERFORMANCE_TIMERS' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'THREADS' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_BY_THREAD_BY_EVENT_NAME' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_BY_INSTANCE' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'EVENTS_WAITS_SUMMARY_GLOBAL_BY_EVENT_NAME' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'FILE_SUMMARY_BY_EVENT_NAME' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'FILE_SUMMARY_BY_INSTANCE' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'MUTEX_INSTANCES' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'RWLOCK_INSTANCES' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'COND_INSTANCES' has the wrong structure
+161210 12:00:19 [ERROR] Native table 'performance_schema'.'FILE_INSTANCES' has the wrong structure
+161210 12:00:19 [Note] Event Scheduler: Loaded 0 events
+161210 12:00:19 [Note] bin\mysqld.exe: ready for connections.
+Version: '5.5.6-rc'  socket: ''  port: 3306  MySQL Community Server (GPL)
+161212 13:54:44 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161212 13:54:44 [Note] Plugin 'FEDERATED' is disabled.
+InnoDB: The InnoDB memory heap is disabled
+InnoDB: Mutexes and rw_locks use Windows interlocked functions
+InnoDB: Compressed tables use zlib 1.2.3
+161212 13:54:44  InnoDB: highest supported file format is Barracuda.
+61212 13:54:44  InnoDB: Operating system error number 32 in a fileInnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+161212 13:54:44  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+ operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+161212 13:54:46 InnoDB 1.1.2 started; log sequence number 1611676
+161212 13:54:54  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:04  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:14  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:24  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:34  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:44  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:55:54  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.
+161212 13:56:04  InnoDB: Operating system error number 32 in a file operation.
+InnoDB: The error means that another program is using InnoDB's files.
+InnoDB: This might be a backup or antivirus software or another instance
+InnoDB: of MySQL. Please close it to get rid of this error.

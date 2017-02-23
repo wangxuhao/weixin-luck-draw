@@ -1,0 +1,510 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.prizebox {
+	background: url(../images/prizelogo.png) no-repeat center center;
+	background-size: cover;
+	position: fixed;
+	top : 0;
+	left: 0;
+	width  : 100%;
+	height : 100%;
+}
+
+.box {
+    background: url("../images/bgj.jpg");
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+}
+li{
+    list-style: none;
+}
+.topIMG {
+    background: url("../images/BG_01.png") no-repeat;
+    position: absolute;
+    height: 150px;
+    width: 200px;
+}
+
+.botIMG {
+    /*background: url("../images/BG_02.png") no-repeat;*/
+    position: absolute;
+    bottom: 0;
+    height: 280px;
+    width: 280px;
+}
+.shake-config {
+	position: fixed;
+    top: 5px;
+    right: 10px;
+}
+.shake-config ul{
+	margin: 0;
+	padding: 0;
+    line-height: 30px;
+    font-size: 16px;
+}
+.shake-config ul li{
+	width: 100px;
+	text-align: center;
+	border: 1px solid white;
+    border-radius: 5px;
+	background: #0095cd;
+	float: left;
+}
+.shake-config ul li a{
+    text-decoration: none;
+	color: white;
+}
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1; /* for IE6 IE7 */
+}
+
+.content {
+    width: 1800px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 100px;
+}
+
+.content-left {
+    background: url("../images/left-qiu_02.png") no-repeat 80px -25px;
+    height: 600px;
+    width: 800px;
+    position: relative;
+    float: left;
+}
+
+.content .grid {
+    background: url("../images/grid1.png") no-repeat;
+    height: 400px;
+    width: 800px;
+    position: absolute;
+    top: 60px;
+}
+
+.content-left .ImgBox {
+    position: relative;
+}
+
+.content-left .ImgBox .common {
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px 2px #fff;
+    -moz-box-shadow: 0 0 2px 2px #fff;
+    box-shadow: 0 0 2px 2px #fff;
+}
+
+.content-left .ImgBox .sty1 {
+    width: 50px;
+    height: 70px;
+}
+
+.content-left .ImgBox .sty2 {
+    width: 60px;
+    height: 60px;
+}
+
+.content-left .ImgBox .sty3 {
+    width: 25px;
+    height: 25px;
+}
+
+.content-left .ImgBox .sty4 {
+    width: 50px;
+    height: 35px;
+}
+
+.content-right {
+    width: 800px;
+    float: right;
+}
+
+.content-right p {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.content-right ul li {
+    width: 150px;
+    height: 90px;
+    float: left;
+    /*margin-right: 10px;*/
+    /*margin-bottom: 15px;*/
+    list-style: none;
+}
+
+.content-right ul li img {
+    width: 70px;
+    height: 70px;
+}
+
+.content-right ul li span {
+    /*display: block;*/
+    text-align: center;
+    /*background: #0c1a3d;*/
+    color: #fff;
+}
+.list-items{
+    width: 100%;
+    margin: 50px auto;
+}
+.list-items ul {
+    padding: 0;
+    margin: 0;
+}
+.list-items li {
+    float: left;
+    margin: 0 3%;
+	width: 14%;
+}
+
+.list-items li a {
+    display: block;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    transition: All 1s ease-in-out;
+    -webkit-transition: All 1s ease-in-out;
+    -moz-transition: All 1s ease-in-out;
+    -o-transition: All 1s ease-in-out;
+}
+
+.list-items li .No1 {
+    background: #A35015;
+}
+.list-items li .No2 {
+    background: #009FAB;
+}
+.list-items li .No3 {
+    background: #871200;
+}
+.list-items li .No4 {
+    background: yellow;
+}
+.list-items li .No5 {
+    background: green;
+}
+.list-items li .No6 {
+    background: blank;
+}
+
+.list-items li a:hover {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+}
+.controls {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background: rgba(136, 134, 160, 0.23); }
+.control-tip {
+  position: absolute;
+  top:10px;
+  right: 100px;
+  box-sizing: border-box;
+  padding: 0.5em;
+  color : white; }
+
+.controls__btn {
+  padding: 6px 12px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.controls__btn-rotate {
+  width: 80px;
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd; 
+}
+.controls__btn-rotate-disabled{
+	background-color: gray;
+} 
+
+/*信息绑定*/
+.info-box,.prize-query{
+    padding: 5px;
+	margin-top: 300px;
+    font-family: "Microsoft YaHei",微软雅黑;
+}
+.info-box > h2,.prize-query > h2{
+    text-align: center;
+	margin: 150px auto;
+    color: #333;
+    font-weight: 500;
+    font-size: 50px;
+}
+.info-box > p{
+    color: rgba(255, 0, 0, 0.7);
+    text-align: center;
+	font-size: 30px;
+}
+.info-add{
+    margin: 50px auto;
+    width: 700px;
+}
+.info-add ul li{
+    list-style: none;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.info-add li span{
+    display: block;
+    float: left;
+    width: 200px;
+    line-height: 60px;
+	font-size: 30px;
+}
+.info-add li .text{
+    float: left;
+    width: 400px;
+    line-height: 60px;
+	font-size: 30px;
+    padding: 0 2pt;
+	margin-left: 30px;
+    color: #333333;
+    font-family: "Microsoft YaHei",微软雅黑;
+}
+.info-add li .btn{
+    display: block;
+    text-align: center;
+	margin: 0 auto;
+    padding: 3pt 0;
+    font-family: "Microsoft YaHei",微软雅黑;
+    font-size: 50px;
+    width: 400px;
+    line-height: 80px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);/*文字阴影*/
+    -webkit-border-radius: .3em; /*圆角*/
+    -moz-border-radius: .3em;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);/*阴影*/
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.blue {
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top, #00adee, #0078a5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+    background: #d9eef7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top, #00adee, #0078a5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:active {
+    color: #d9eef7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+    background: -moz-linear-gradient(top, #0078a5, #00adee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+/*中奖查询*/
+.prize-box{
+    position: absolute;  
+    width:900px;  
+    height:900px;  
+    left:50%;  
+    top:20%;  
+    margin-left:-450px;  
+    margin-top:-450px;  
+   
+}
+.prize-box > h2{
+    text-align: center;
+    /* margin: 150px auto; */
+    color: #333;
+    font-weight: 500;
+    font-size: 50px;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.prize-box table tr{
+    line-height: 80px;
+    font-size: 30px;
+}
+.prize-box table thead{
+    background: #81bef7;
+    color: #ffffff;
+}
+.prize-box table tbody tr{
+    border-bottom: 1px dashed #81bef7;
+}
+.prize-box table tbody td{
+    text-align: center;
+    color: #666;
+}
+.prize-box .claim-prize{
+    border-radius: 10px;
+    line-height: 35px; 
+    color: #ffffff;
+    background: rgba(255, 0, 0, 0.7);
+    /* font-size: 50px; */
+}
+.prize-box .prize-tip{
+	line-height: 80px;
+    font-size: 50px;
+    text-align: center;
+}
+.claim-prize:active{
+    background: rgba(255, 0, 0, 0.89);
+}
+.page-tip{
+    font-size: 35px;
+    color: red;
+    font-weight: bold;
+    text-indent: 2em;
+    line-height: 60px;
+    position: fixed;
+    top: 22px;
+    margin: 20px;
+}
+/*后台登录页面*/
+.login-info {
+    width: 400px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+	background-color: white;
+	overflow: hidden;
+}
+.login-info h2{
+	text-align: center;
+}
+.login-info .tabrow{
+	display: block;
+    font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+}
+.login-info .tabrow>input{
+	line-height: 20px;
+}
+.login-info p{
+	text-align: center;
+	line-height: 40px;
+}
+.login-info p>input{
+	margin: auto 30px;
+	font-size: 18px;
+    border-radius: 5px;
+}
+/*红包雨页面*/
+.RedPack{
+    /*width: 100%;*/
+	width: 1366px;
+    margin: 0 auto;
+}
+.RedPack .title p{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin: 10px 0;
+}
+.RedPack .items li{
+    float: left;
+    margin-right: 20px;
+}
+.RedPack .items li a{
+    color: #ffffff;
+    width: 200px;
+    height: 257px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+.RedPack .items .items-1{
+    background: url("../images/redpack/pic-1.png") no-repeat;
+}
+.RedPack .items .items-2{
+    background: url("../images/redpack/pic-2.png") no-repeat;
+}
+.RedPack .items .items-3{
+    background: url("../images/redpack/pic-3.png") no-repeat;
+}
+.RedPack .items .items-4{
+    background: url("../images/redpack/pic-4.png") no-repeat;
+}
+.RedPack .items .items-5{
+    background: url("../images/redpack/pic-5.png") no-repeat;
+}
+.RedPack .items .items-6{
+    background: url("../images/redpack/pic-6.png") no-repeat;
+}
+.RedPack .items a.active-a{
+    background: url("../images/redpack/end.png") no-repeat;
+}
+.RedPack .items .opacity{
+    opacity: 0.5;
+}
+.RedPack .start-a{
+    width: 210px;
+    margin: 80px auto 0;
+}
+.RedPack .start-a input{
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+    background: #0095cd;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}

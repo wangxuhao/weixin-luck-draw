@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pojo.PrizeItemMapper">
+	<resultMap type="PrizeItem" id="prizeItemMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" jdbcType="VARCHAR" />
+		<result property="cyclebidcount" column="cyclebidcount" jdbcType="INTEGER" />
+		<result property="roundno" column="roundno" jdbcType="INTEGER" />
+		<result property="status" column="status" jdbcType="INTEGER" />
+	</resultMap>
+	<select id="getAllPrizeItem" parameterType="PrizeItem" resultMap="prizeItemMap">
+		select * from PrizeItem where indexShow = 1
+	</select>
+	<select id="findPrizeItemById" parameterType="PrizeItem" resultMap="prizeItemMap">
+		select * from PrizeItem where id = #{id}
+	</select>
+	<select id="findPrizeItemByRoundNo" parameterType="PrizeItem" resultMap="prizeItemMap">
+		select * from PrizeItem where roundno = #{roundno} order by rand()
+	</select>
+	<update id="updatePrizeItemStatusByRoundNo" parameterType="PrizeItem" flushCache="true" statementType="PREPARED">
+	    update PrizeItem set status = #{status} where roundno = #{roundno}
+	</update>
+	<select id="getAllRound" parameterType="PrizeItem" resultMap="prizeItemMap">
+		select * from PrizeItem where roundno is not null and status in(0,1,2) group by  roundno order by roundno;
+	</select>
+</mapper>

@@ -1,0 +1,8 @@
+<head lang="en">
+    <meta charset="UTF-8"/> 
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery/jquery.1.9.1.js"></script>
+    <script type="text/javascript" src="js/lodash-compat/lodash.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>玉湖集团</title>
+</head>
